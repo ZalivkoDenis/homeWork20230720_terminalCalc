@@ -23,7 +23,7 @@ def get_operation_template(operation_number: int):
             return lambda int1, int2: f'{int1} ? {int2} = <Операция не определена>'
 
 
-def print_header():
+def print_header() -> None:
     print('-' * 40)
     print('Калькулятор'.center(40, ' '))
     print('-' * 40)
@@ -39,10 +39,10 @@ def print_header():
     """)
     print('-' * 40)
 
+    return None
+
 
 def main() -> None:
-    number1 = 0
-    number2 = 0
     while True:
         os.system('cls')
         print_header()
